@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Hotel</title>
+</head>
+<style>
+    body {
+
+        background-image: url(/LifeHotel.jpg);
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header {
+        /* border: 2px solid red; */
+        background-color: black;
+    position: fixed;
+    margin: -1px 0px;
+    width: 1263px;
+    }
+
+    .left {
+        display: inline-block;
+        /* border: 1px solid red; */
+        margin: 9px 48px;
+        padding: 11px 17px;
+        font-family: 'Licorice', cursive;
+        font-size: 26px;
+        color: white;
+
+    }
+    
+    .mid {
+        display: inline-block;
+        /* border: 1px solid red; */
+        width: 33%;
+        padding: 0px 18px;
+        margin: -11px 52px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .right {
+        position: absolute;
+        right: 0px;
+        display: inline-block;
+        /* border: 1px solid red; */
+        margin: 9px 48px;
+        padding: 11px 17px;
+        cursor: pointer;
+    }
+
+    .mid ul li {
+        display: inline-block;
+    }
+
+    .mid ul li a {
+        text-decoration: none;
+        margin: 0px 25px;
+        padding: 0px 0px;
+        color: white;
+
+    }
+
+    .left img {
+        width: 50px;
+        height: 50px;
+        margin: -13px 1px;
+        padding: 0px 5px;
+
+    }
+
+    .btn {
+        color: white;
+        background-color: black;
+        margin: 8px 23px;
+        padding: 8px 2px;
+        border-radius: 7px;
+        width: 75px;
+
+
+    }
+
+    .btn:hover {
+        background-color: green;
+        text-align: center;
+    }
+
+    .mid ul li a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .ls {
+        display: inline-block;
+    width: 506px;
+    height: 605px;
+    margin: 57px 70px;
+    padding: 17px 14px;
+    background-image: url(/formhotel2.jpg);
+    border-radius: 24px;
+}
+
+    .content {
+        margin: 11px 58px;
+        width: 61%;
+        height: 38px;
+        text-align: center;
+        background: none;
+        font-size: 23px;
+        padding: 7px 38px;
+        border-radius: 14px;
+        color: rgb(238, 213, 213);
+
+    }
+
+    #acroom {
+        width: 49px;
+        height: 23px;
+    }
+
+    #srbtn {
+        position: relative;
+        left: 47px;
+        width: 185px;
+        margin: 43px 8px;
+        top: 34px;
+        padding: 17px 5px;
+        background: none;
+        border-radius: 18px;
+    }
+
+    ::placeholder {
+        color: rgb(238, 213, 213);
+    }
+</style>
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <header class="container">
+        <div class="left">
+            <img src="/HotelLogo.jpg" alt="Error">
+            Life Hotel
+        </div>
+        <div class="mid">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Rent</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Login</button>
+            <button class="btn">Contact Us</button>
+        </div>
+    </header>
+    <div class="ls">
+        <form action="backend.php">
+            <div><input type="text" placeholder="Enter Your Name" class="content"></div>
+            <div><input type="email" placeholder="Enter Your Email" class="content"></div>
+            <div><input type="text" placeholder="Enter Your Mobile Number" class="content"></div>
+            Date Of Arrival
+            <div><input type="date" placeholder="" class="content"></div>
+            <div>Select Your State
+                <select name="State" id="" class="content">
+                    <option value="">Select</option>
+                    <option value="">Andhra Pradesh</option>
+                    <option value="">Arunachal Pradesh</option>
+                    <option value="">Assam</option>
+                    <option value="">Bihar</option>
+                    <option value="">Chhattisgarh</option>
+                    <option value="">Goa</option>
+                    <option value="">Gujarat</option>
+                    <option value="">Haryana</option>
+                    <option value="">Himachal Pradesh</option>
+                    <option value="">Jharkhand</option>
+                    <option value="">Karnataka</option>
+                    <option value="">Kerala</option>
+                    <option value="">Madhya Pradesh</option>
+                    <option value="">Maharashtra</option>
+                    <option value="">Manipur</option>
+                    <option value="">Meghalaya</option>
+                    <option value="">Mizoram</option>
+                    <option value="">Nagaland</option>
+                    <option value="">Odisha</option>
+                    <option value="">Punjab</option>
+                    <option value="">Rajasthan</option>
+                    <option value="">Sikkim</option>
+                    <option value="">Tamil Nadu</option>
+                    <option value="">Telangana</option>
+                    <option value="">Tripura</option>
+                    <option value="">Uttar Pradesh</option>
+                    <option value="">Uttarakhand</option>
+                    <option value="">West Bengal</option>
+                </select>
+            </div>
+            <div class="content">
+                Room: <br> AC Room<input type="radio" name="room type" id="acroom"><br>
+                Non-AC Room<input type="radio" name="roomtype" id="acroom">
+            </div>
+            <div>
+                <input type="submit" value="Submit Now" id="srbtn">
+                <input type="reset" value="Reset Now" id="srbtn">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
